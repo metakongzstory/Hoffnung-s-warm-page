@@ -1,95 +1,58 @@
 <!DOCTYPE html>
-<html lang="korean">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hoffnung's warm page</title>
+  <title>My Homepage</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.ico">
 </head>
 <body>
   <header>
-    <h1>Hoffnung's warm page</h1>
+    <h1>My Homepage</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
   </header>
-  
+
   <main>
     <section>
-      <h2>콩즈 2차 창작 게시판</h2>
+      <h2>Bulletin Board</h2>
       <form>
-        <label for="name">이름</label>
-        <input type="text" id="name" name="name" required><br><br>
-        <label for="message">메시지</label>
-        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-        <button type="submit" onclick="addMessage()">메시지 올리기</button>
+        <label for="message">Leave a message:</label>
+        <textarea id="message" rows="5"></textarea>
+        <button type="submit">Post</button>
       </form>
-      
-      <div id="messageList"></div>
+      <div id="messageList">
+        <!-- Messages will be added here dynamically using JavaScript -->
+      </div>
     </section>
-    
+
     <section>
-      <h2>콩즈 홀더 스토어 Map</h2>
-      <div id="map"></div>
+      <h2>Gallery</h2>
+      <div>
+        <img src="image1.jpg" alt="Image 1">
+        <p>Description of image 1.</p>
+      </div>
+      <div>
+        <img src="image2.jpg" alt="Image 2">
+        <p>Description of image 2.</p>
+      </div>
+      <div>
+        <img src="image3.jpg" alt="Image 3">
+        <p>Description of image 3.</p>
+      </div>
     </section>
   </main>
-  
-  <footer>
-    <p>&copy; 2023 Hoffnung's warm page</p>
-  </footer>
-  
-  <script>
-    // Initialize an empty array to store messages
-    let messages = [];
-    
-    // Function to add a new message to the array and display it
-    function addMessage() {
-      let name = document.getElementById("name").value;
-      let message = document.getElementById("message").value;
-      let date = new Date().toLocaleString();
-      let newMessage = {name: name, message: message, date: date};
-      messages.push(newMessage);
-      displayMessages();
-      document.getElementById("name").value = "";
-      document.getElementById("message").value = "";
-    }
-    
-    // Function to display all messages in the array
-    function displayMessages() {
-      let messageList = document.getElementById("messageList");
-      messageList.innerHTML = "";
-      messages.forEach(function(message) {
-        let messageDiv = document.createElement("div");
-        messageDiv.innerHTML = "<strong>" + message.name + ":</strong> " + message.message + "<br>" + message.date;
-        messageList.appendChild(messageDiv);
-      });
-    }
-    
-    // Call the displayMessages function on page load
-    displayMessages();
-    
-    // Initialize the map with member store locations
-    function initMap() {
-      let map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 37.7749, lng: -122.4194 },
-        zoom: 10
-      });
-      // Add member store markers to the map
-      let markers = [
-        { lat: 37.7749, lng: -122.4194, name: "Store 1" },
-        { lat: 37.7933, lng: -122.3939, name: "Store 2" },
-        { lat: 37.7219, lng: -122.4782, name: "Store 3" },
-        { lat: 37.7577, lng: -122.4376, name: "Store 4" }
-      ];
-      markers.forEach(function(marker) {
-        let newMarker = new google.maps.Marker({
-          position: { lat: marker.lat, lng: marker.lng },
-          map: map,
-          title: marker.name
-        });
-      });
-    }
-  </script>
-  
-  <!-- Load the Google Maps API -->
-  <script src="https://maps.googleapis.com/maps/api
 
+  <footer>
+    <p>&copy; 2023 My Homepage</p>
+  </footer>
+
+  <script src="bulletin-board.js"></script>
+  <script src="gallery.js"></script>
 </body>
 </html>
