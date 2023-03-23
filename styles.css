@@ -1,4 +1,20 @@
 /* Set the font family and background color for the entire page */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8d7da;
+}
+
+/* Style the header */
+header {
+  background-color: #721c24;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 nav {
 	display: flex;
 	justify-content: center;
@@ -24,20 +40,6 @@ nav a:hover {
 	text-decoration: underline;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8d7da;
-}
-
-/* Style the header */
-header {
-  background-color: #721c24;
-  color: white;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 /* Style the main content area */
 main {
