@@ -1,121 +1,70 @@
-/* Global styles */
-
+/* Set the font family and background color for the entire page */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #F9DCC4;
-    color: #333333;
-    margin: 0;
-  }
-  
-  a {
-    color: #ff6600;
-    text-decoration: none;
-  }
-  
-  header {
-    background-color: #F08080;
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px;
-  }
-  
-  section {
-    background-color: #FFCBA4;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
-    overflow: hidden;
-    padding: 20px;
-    width: calc(50% - 30px);
-  }
-  
-  section:last-of-type {
-    margin-right: 0;
-  }
-  
-  h1, h2, h3 {
-    font-weight: normal;
-    margin: 0;
-  }
-  
-  h1 {
-    font-size: 48px;
-    text-align: center;
-  }
-  
-  h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
-  
-  label {
-    display: block;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  input[type="text"], textarea {
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    font-size: 18px;
-    margin-bottom: 10px;
-    padding: 10px;
-    width: 100%;
-  }
-  
-  button[type="submit"] {
-    background-color: #ff6600;
-    border: none;
-    border-radius: 5px;
-    color: #ffffff;
-    cursor: pointer;
-    font-size: 18px;
-    padding: 10px 20px;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #ff8533;
-  }
-  
-  #messageList {
-    margin-top: 20px;
-    max-height: 300px;
-    overflow-y: auto;
-    padding-right: 10px;
-  }
-  
-  #messageList div {
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    margin-bottom: 10px;
-    padding: 10px;
-  }
-  
-  #messageList div:last-of-type {
-    margin-bottom: 0;
-  }
-  
-  #map {
-    height: 400px;
-    width: 100%;
-  }
-  
-  /* Footer styles */
-  
-  footer {
-    background-color: #F08080;
-    color: #ffffff;
-    padding: 10px 20px;
-    text-align: center;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #f8d7da;
+}
+
+/* Style the header */
+header {
+  background-color: #721c24;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Style the main content area */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Style the sections */
+section {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+  flex-basis: calc(50% - 10px);
+  padding: 20px;
+}
+
+/* Style the images in the gallery */
+section img {
+  max-width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+/* Style the form in the bulletin board section */
+section form {
+  margin-bottom: 10px;
+}
+
+/* Style the button in the bulletin board section */
+section button {
+  background-color: #721c24;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Style the message list in the bulletin board section */
+section #messageList {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+/* Style the footer */
+footer {
+  background-color: #721c24;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
